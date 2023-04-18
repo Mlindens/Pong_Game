@@ -53,5 +53,5 @@ This implementation of Pong consists of the following components:
 
 
 ### Acknowledgments
-* The original Snake game, which inspired this implementation.
+* The original Pong game, which inspired this implementation.
 * The Python and Turtle documentation for providing valuable resources and examples.
