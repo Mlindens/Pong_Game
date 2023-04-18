@@ -12,17 +12,22 @@ scoreboard, and manages the main game loop. The game loop handles ball movement,
 control, and collision detection.
 """
 
+# screen set up with color, size, and title.
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(width=800, height=600)
 screen.title("Pong")
 screen.tracer(0)
 
+# set each paddle location
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
+
+
 ball = Ball()
 scoreboard = Scoreboard()
 
+# listen for keyboard input and bind controls to Up, Down, w and s
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
@@ -32,6 +37,7 @@ screen.onkey(l_paddle.go_down, "s")
 
 game_is_on = True
 
+# main game loop
 while game_is_on:
     time.sleep(ball.move_speed)
     screen.update()
